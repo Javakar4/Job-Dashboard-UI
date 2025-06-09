@@ -112,6 +112,7 @@ const JobDialog = ({ open, handleClose }) => {
       alert('Network error');
       console.error(error);
     }
+    localStorage.removeItem('jobDraft');
   };
 
   const handleSaveDraft = () => {
