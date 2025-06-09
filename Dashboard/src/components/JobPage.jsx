@@ -51,7 +51,7 @@ function JobPage() {
           filteredJobs.map((job) => (
             <JobCard
               key={job._id}
-              logo={`http://localhost:4000/uploads/${job.logo}`}
+              logo={`https://job-portal-backend-ajr3.onrender.com/uploads/${job.logo}`}
               title={job.title}
               time={formatDistanceToNow(new Date(job.createdAt), { addSuffix: true })}
               experience={job.type}
