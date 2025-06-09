@@ -70,6 +70,15 @@ const JobDialog = ({ open, handleClose }) => {
     description: ''
   });
 
+  useEffect(() => {
+  if (open) {
+    const savedDraft = localStorage.getItem('jobDraft');
+    if (savedDraft) {
+      setJobDetails((prev) => ({ ...prev, ...JSON.parse(savedDraft) }));
+    }
+  }
+}, [open]);
+  
   const handleChange = (field) => (event) => {
     setJobDetails({ ...jobDetails, [field]: event.target.value });
   };
@@ -104,6 +113,21 @@ const JobDialog = ({ open, handleClose }) => {
       console.error(error);
     }
   };
+
+  const handleSaveDraft = () => {
+  const draftData = {
+    ...jobDetails,
+    logo: null, 
+  };
+
+  try {
+    localStorage.setItem('jobDraft', JSON.stringify(draftData));
+    alert('Draft saved locally!');
+  } catch (error) {
+    console.error('Error saving draft:', error);
+    alert('Failed to save draft');
+  }
+};
 
   return (
     <Dialog
@@ -274,6 +298,7 @@ const JobDialog = ({ open, handleClose }) => {
             <Button
               variant="outlined"
               endIcon={<KeyboardDoubleArrowDownIcon />}
+              onClick={handleSaveDraft}
               sx={{
                 mt: 2,
                 borderColor: '#222222',
