@@ -10,7 +10,7 @@ const JobList = ({ filters }) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:4000/api/jobs')
+    axios.get('https://job-portal-backend-ajr3.onrender.com/api/jobs')
       .then((res) => {
         setJobs(res.data);
         setLoading(false);
