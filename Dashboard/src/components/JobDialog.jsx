@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import {
   Dialog, DialogTitle, DialogContent, TextField, Select, MenuItem,
   Button, InputLabel, FormControl, Grid, Box, Typography
@@ -78,7 +78,7 @@ const JobDialog = ({ open, handleClose }) => {
     }
   }
 }, [open]);
-  
+
   const handleChange = (field) => (event) => {
     setJobDetails({ ...jobDetails, [field]: event.target.value });
   };
@@ -130,7 +130,7 @@ const JobDialog = ({ open, handleClose }) => {
   }
 };
 
-  return (
+return (
     <Dialog
       open={open}
       onClose={handleClose}
