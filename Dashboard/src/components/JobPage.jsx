@@ -19,7 +19,7 @@ function JobPage() {
   useEffect(() => {
     async function fetchJobs() {
       try {
-        const response = await axios.get('https://job-portal-backend-ajr3.onrender.com');
+        const response = await axios.get('https://job-portal-backend-ajr3.onrender.com/api/jobs');
         setJobs(response.data);
       } catch (err) {
         setError('Failed to load jobs');
