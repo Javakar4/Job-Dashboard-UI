@@ -15,7 +15,7 @@ app.use(express.json()); // For application/json
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 // MongoDB connection
-const uri = "mongodb+srv://JavakarN:JavakarN4@cluster0.nibag.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://javakarjava44:JavakarN4@cluster0.dz5dlbb.mongodb.net/";
 
 mongoose.connect(uri).then(() => console.log('✅ Connected to MongoDB'))
   .catch(err => console.error('❌ MongoDB connection error:', err));
