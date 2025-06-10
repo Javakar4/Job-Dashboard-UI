@@ -4,7 +4,7 @@ import { FiUserPlus } from 'react-icons/fi';
 import { FaBuilding } from 'react-icons/fa';
 import { HiOutlineSquare3Stack3D } from "react-icons/hi2";
 import amazon from '../assets/amazon.png';
-import google from '../assets/google.webp';
+// import google from '../assets/google.webp';
 import netflix from '../assets/netflix.png';
 import swiggy from '../assets/swiggy.png';
 import tesla from '../assets/tesla.png';
