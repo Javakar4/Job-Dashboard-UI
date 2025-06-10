@@ -9,7 +9,7 @@ import netflix from '../assets/netflix.png';
 import swiggy from '../assets/swiggy.png';
 import tesla from '../assets/tesla.png';
 
-const fallbackImages = [amazon, google, netflix, swiggy, tesla];
+const fallbackImages = [amazon, netflix, swiggy, tesla];
 
 const JobCard = ({ logo, title, time, experience, location, salary, description }) => {
   const [imgSrc, setImgSrc] = useState(logo);
