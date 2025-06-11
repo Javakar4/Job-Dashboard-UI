@@ -65,7 +65,7 @@ function Header({ filters, setFilters }) {
 
         <div className="filter-item no-border salary-range">
           <div className="salary-header">
-            <span>Salary Per Month</span>
+            <span>Salary per Year</span>
             <span>
               ₹{filters.salary[0]}LPA - ₹{filters.salary[1]}LPA
             </span>
